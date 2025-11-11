@@ -6,7 +6,7 @@ require (
 	dario.cat/mergo v1.0.2
 	github.com/Masterminds/sprig/v3 v3.3.0
 	github.com/avast/retry-go/v4 v4.7.0
-	github.com/bmc-toolbox/bmclib/v2 v2.3.5-0.20251010091507-63cb571e5597
+	github.com/bmc-toolbox/bmclib/v2 v2.3.5-0.20251109141344-d8dd3c011fb4
 	github.com/ccoveille/go-safecast v1.7.0
 	github.com/cenkalti/backoff/v5 v5.0.3
 	github.com/containerd/containerd v1.7.28
@@ -314,3 +314,11 @@ replace (
 	k8s.io/sample-cli-plugin => k8s.io/sample-cli-plugin v0.33.4
 	k8s.io/sample-controller => k8s.io/sample-controller v0.33.4
 )
+
+// Map the local/fork import path to the canonical bmc-toolbox module so tooling
+// consumes the module that declares module path "github.com/bmc-toolbox/bmclib/v2".
+// During development use your fork's latest main. We'll replace the canonical
+// module to point at a local clone of your fork (created next) so the build
+// uses the fork's latest commit on main.
+// Use the fork on GitHub at the specific commit for development.
+replace github.com/bmc-toolbox/bmclib/v2 => github.com/michaelin/bmclib/v2 v2.3.5-0.20251109141344-d8dd3c011fb4
