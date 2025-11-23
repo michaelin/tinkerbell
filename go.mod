@@ -281,6 +281,7 @@ require (
 )
 
 replace (
+	github.com/bmc-toolbox/bmclib/v2 => github.com/michaelin/bmclib/v2 v2.3.5-0.20251109141344-d8dd3c011fb4
 	github.com/tinkerbell/tinkerbell/api => ./api
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0
 	k8s.io/api => k8s.io/api v0.33.4
